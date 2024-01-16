@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        #game-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #word-display {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #input-field {
+            padding: 8px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #submit-btn,
+        #play-again-btn {
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #play-again-btn {
+            background-color: #2196F3;
+        }
+
+        .correct {
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        #correct-positions,
+        #not-contains-letters,
+        #attempts-info {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .marked-section {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="word-display"></div>
+    <div class="marked-section">Contains:</div>
+    <div id="correct-positions"></div>
+    <div class="marked-section">Does not contain:</div>
+    <div id="not-contains-letters"></div>
+    <input type="text" id="input-field" placeholder="Enter the word">
+    <button id="submit-btn" onclick="checkGuess()">Submit</button>
+    <button id="play-again-btn" onclick="playAgain()">Play Again</button>
+    <div id="attempts-info"></div>
+</div>
+
+<script>
+    const wordLists = {
+        2: ['at', 'be', 'in', 'on', 'up', 'no', 'do', 'go', 'it', 'so', 'to', 'we', 'my', 'is', 'if', 'of', 'by', 'or', 'an', 'am', 'as', 'he', 'me', 'up', 'us', 'up', 'as', 'is', 'it', 'at', 'to', 'up', 'us', 'we', 'go', 'so', 'he', 'is', 'by'],
+        3: ['the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'any', 'can', 'had', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', ' him', 'his', 'how', 'man', 'new', 'now', 'old', 'see', 'two', 'way', 'who', 'boy', 'did', 'put', 'say', 'she', 'too', 'use', 'big', 'box', 'its', 'get'],
+        4: ['that', 'with', 'have', 'this', 'will', 'your', 'from', 'they', 'know', 'want', 'been', 'good', 'much', 'some', 'time', 'very', 'when', 'come', 'here', 'just', 'like', 'long', 'make', 'many', 'more', 'only', 'over', 'such', 'take', 'than', 'them', 'well', 'were', 'what', 'down', 'into', 'even', 'first', 'made', 'most', 'much'],
+        5: ['about', 'after', 'could', 'first', 'great', 'house', 'large', 'other', 'place', 'right', 'small', 'sound', 'still', 'there', 'three', 'water', 'where', 'which', 'world', 'would', 'write', 'could', 'people', 'school', 'should', 'through', 'together', 'country', 'children', 'example', 'important', 'sometimes', 'understand', 'community', 'everything', 'experience', 'information', 'particular', 'particularly', 'university']
+    };
+
+    let targetWord;
+    let guessedWord;
+    let correctPositions = '';
+    let notContainsLetters = '';
+    let attempts = 0;
+
+    function initGame() {
+        const wordLength = getRandomLength();
+        targetWord = getRandomWord(wordLength);
+        guessedWord = Array(targetWord.length).fill('_');
+        correctPositions = '';
+        notContainsLetters = '';
+        attempts = 0;
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        const wordDisplay = document.getElementById('word-display');
+        const correctPositionsDisplay = document.getElementById('correct-positions');
+        const notContainsLettersDisplay = document.getElementById('not-contains-letters');
+
+        wordDisplay.innerHTML = guessedWord.map((letter, index) => `<span class="${letter === targetWord[index] ? 'correct' : ''}">${letter}</span>`).join(' ');
+        correctPositionsDisplay.textContent = correctPositions;
+        notContainsLettersDisplay.textContent = notContainsLetters;
+    }
+
+    function checkGuess() {
+        attempts++;
+        const inputField = document.getElementById('input-field');
+        const userGuess = inputField.value.toLowerCase();
+
+        if (isValidWord(userGuess)) {
+            if (userGuess.length === targetWord.length && /^[a-z]+$/.test(userGuess)) {
+                for (let i = 0; i < targetWord.length; i++) {
+                    if (userGuess[i] === targetWord[i]) {
+                        guessedWord[i] = userGuess[i];
+                    } else if (targetWord.includes(userGuess[i]) && correctPositions.indexOf(userGuess[i]) === -1) {
+                        correctPositions += userGuess[i];
+                    } else if (!targetWord.includes(userGuess[i]) && notContainsLetters.indexOf(userGuess[i]) === -1) {
+                        notContainsLetters += userGuess[i];
+                    }
+                }
+                updateDisplay();
+                inputField.value = '';
+                checkWin();
+            } else {
+                alert('Please enter a valid word of the chosen length.');
+            }
+        } else {
+            alert('Invalid word. Please choose a word from the list.');
+        }
+    }
+
+    function checkWin() {
+        if (guessedWord.join('') === targetWord) {
+            alert(`Congratulations! You guessed the word in ${attempts} attempts.`);
+            playAgain();
+        }
+    }
+
+    function playAgain() {
+        initGame();
+    }
+
+    function getRandomLength() {
+        const lengths = Object.keys(wordLists);
+        return lengths[Math.floor(Math.random() * lengths.length)];
+    }
+
+    function getRandomWord(length) {
+        return wordLists[length][Math.floor(Math.random() * wordLists[length].length)];
+    }
+
+    function isValidWord(word) {
+        const wordLength = word.length;
+        return wordLists[wordLength].includes(word);
+    }
+
+    initGame();
+</script>
+
+</body>
+</html>
