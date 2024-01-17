@@ -1,7 +1,10 @@
 # janbugel.github.io
 
-to do list
+### to do list
 
-1. finish basic site
-2. make it more like a resume
-3. add simple games 
+- [x] finish basic site 
+- [x] make it more like a resume
+- [ ] add dark mode toggle
+- [ ] add language toggle
+- [ ] add simple games 
+- [ ]
