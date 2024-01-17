@@ -1,9 +1,8 @@
-// footer.js
-
 document.addEventListener("DOMContentLoaded", function () {
     // Define the footer HTML content as a string
     const footerContent = `
-        <p>&copy; 2022 John Doe</p>
+        <p>&copy; 2023 John Doe | <a href="https://twitter.com/yourtwitterhandle" target="_blank" rel="noopener noreferrer">Twitter</a> |
+         <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     `;
 
     // Set the content of the footer element with the footer content
