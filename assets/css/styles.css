@@ -56,12 +56,19 @@ section {
 }
 
 footer {
-    margin-top: auto; /* Push the footer to the bottom */
     background-color: #333; /* Dark grey background for the footer */
     color: #fff; /* Text color for the footer */
     text-align: center;
     padding: 10px 0;
     width: 100%;
+    margin-top: auto; /* Push the footer up, same distance as the navbar from the top */
+    margin-bottom: 20px; /* Add some space at the bottom of the footer */
+}
+
+footer a {
+    color: #fff; /* Set link color to match the text color */
+    text-decoration: none;
+    font-size: 16px; /* Set link font size to match the footer text size */
 }
 
 /* Responsive Styles */
