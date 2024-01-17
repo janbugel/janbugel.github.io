@@ -80,9 +80,15 @@ button {
     background-color: transparent;
     color: inherit;
     border: none;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
+    padding: 0;
     /*transition: background-color 0.3s, color 0.3s; /* Added transition for smooth color change */
+}
+
+button:hover {
+    color: #61a4f1;
 }
 
 /* section styles*/
