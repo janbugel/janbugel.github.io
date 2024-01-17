@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Define the footer HTML content as a string
     const footerContent = `
-        <p>&copy; 2023 John Doe |
+        <p>&copy; 2024 John Doe |
         <a href="https://twitter.com/yourtwitterhandle" target="_blank" rel="noopener noreferrer">twitter</a> |
         <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a><p>
     `;
