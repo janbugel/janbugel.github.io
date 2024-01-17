@@ -33,7 +33,7 @@
         <div id="aboutContent"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                fetch('/markdown/about.md')
+                fetch('/assets/markdown/about.md')
                     .then(response => response.text())
                     .then(text => {
                         document.getElementById('aboutContent').innerHTML = new showdown.Converter().makeHtml(text);
@@ -47,7 +47,7 @@
         <div id="projectsContent"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                fetch('/markdown/projects.md')
+                fetch('/assets/markdown/projects.md')
                     .then(response => response.text())
                     .then(text => {
                         document.getElementById('projectsContent').innerHTML = new showdown.Converter().makeHtml(text);
@@ -61,7 +61,7 @@
         <div id="contactContent"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                fetch('/markdown/contact.md')
+                fetch('/assets/markdown/contact.md')
                     .then(response => response.text())
                     .then(text => {
                         document.getElementById('contactContent').innerHTML = new showdown.Converter().makeHtml(text);
