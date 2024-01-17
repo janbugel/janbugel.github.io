@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="work">work</a></li>
             <li><a href="education">education</a></li>
             <li><a href="contact">contact</a></li>
-            
+            <button id="theme-toggle-button">🌞 🌜</button>
         </ul>
     `;
 
