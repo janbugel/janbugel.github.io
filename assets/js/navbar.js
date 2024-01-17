@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="work">work</a></li>
             <li><a href="education">education</a></li>
             <li><a href="contact">contact</a></li>
-            <button id="theme-toggle-button">dark</button>
+            <button id="theme-toggle-button" aria-label="Toggle Dark Mode">🌞</button>
         </ul>
     `;
 

@@ -59,8 +59,11 @@ nav a {
     font-size: 20px;
     color: inherit;
 }
+nav a:hover {
+    color: #61a4f1;
+}
 
-/* Change link color based on body color */
+/* Change nav link color based on body color */
 
 body.light nav a:link{
     color: #222;
@@ -70,9 +73,6 @@ body.dark nav a:link{
     color: #fff;
 }
 
-nav a:hover {
-    color: #61a4f1;
-}
 
 /* button styles */
 
@@ -110,20 +110,16 @@ footer {
     margin-bottom: 20px;
 }
 
+footer a:hover {
+    color: #61a4f1;
+}
+
 body.light footer a:link{
     color: #222;
 }
 
 body.dark footer a:link{
     color: #fff;
-}
-
-body.light footer a:hover {
-    color: #61a4f1;
-}
-
-body.dark footer a:hover {
-    color: #61a4f1;
 }
 
 /* Responsive Styles */
