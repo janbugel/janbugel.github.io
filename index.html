@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +10,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="/">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+        <nav id="navbar-placeholder"></nav>
     </header>
-    
 
-    <section id="home">
+    <section>
         <h1>hey, I'm John 👋</h1>
         <p>Hi, I'm John Doe, a software developer.</p>
-    </section>
-
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at john@example.com</p>
     </section>
 
     <footer>
         <p>&copy; 2022 John Doe</p>
     </footer>
+
+    <!-- Include JavaScript to dynamically load the navbar -->
+    <script src="/assets/js/navbar.js"></script>
 </body>
 </html>

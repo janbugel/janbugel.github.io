@@ -1,3 +1,5 @@
+<!-- about.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +10,10 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="/">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+        <nav id="navbar-placeholder"></nav>
     </header>
 
-    <section id="about">
+    <section>
         <h2>About Me</h2>
         <p>I have several years of experience in web development and specialize in front-end technologies.
         I mostly work with HTML, CSS, JavaScript, and PHP. I also have experience with Node.js and MySQL.
@@ -30,5 +25,8 @@
     <footer>
         <p>&copy; 2022 John Doe</p>
     </footer>
+
+    <!-- Include JavaScript to dynamically load the navbar -->
+    <script src="/assets/js/navbar.js"></script>
 </body>
 </html>
