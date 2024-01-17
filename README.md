@@ -1,10 +1,10 @@
-# janbugel.github.io
+# resume portfolio site
 
 ### to do list
 
 - [x] finish basic site 
-- [x] make it more like a resume
+- [ ] make it more like a resume - fill with text
 - [ ] add dark mode toggle
 - [ ] add language toggle
 - [ ] add simple games 
-- [ ]
+- [ ] add backend project
