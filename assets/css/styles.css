@@ -1,19 +1,17 @@
 /* styles.css */
 
-/* Reset styles */
+/* body styles*/
 
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
-
-/* Body styles */
 
 body {
     font-family: 'Fira Code', monospace;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
     min-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
@@ -29,7 +27,7 @@ body.light {
     color: #222;
 }
 
-/* Header styles */
+/* Header styles*/
 
 header {
     width: 100%;
@@ -42,19 +40,17 @@ header.dark {
     color: #fff;
 }
 
-nav {
-    padding: 0 20px;
-}
+/* nav styles*/ 
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-start;
+    padding: 0 20px;
 }
 
 nav li {
     margin-right: 20px;
-    margin-bottom: 10px; /* Added for responsive design */
 }
 
 nav a {
@@ -66,11 +62,11 @@ nav a {
 
 /* Change link color based on body color */
 
-body.light nav a:link {
+body.light nav a:link{
     color: #222;
 }
 
-body.dark nav a:link {
+body.dark nav a:link{
     color: #fff;
 }
 
@@ -78,7 +74,7 @@ nav a:hover {
     color: #61a4f1;
 }
 
-/* Button styles */
+/* button styles */
 
 button {
     background-color: transparent;
@@ -86,9 +82,10 @@ button {
     border: none;
     font-size: 16px;
     cursor: pointer;
+    /*transition: background-color 0.3s, color 0.3s; /* Added transition for smooth color change */
 }
 
-/* Section styles */
+/* section styles*/
 
 section {
     flex: 0;
@@ -97,7 +94,7 @@ section {
     text-align: left;
 }
 
-/* Footer styles */
+/* footer styles */
 
 footer {
     text-align: center;
@@ -107,12 +104,18 @@ footer {
     margin-bottom: 20px;
 }
 
-body.light footer a:link,
-body.dark footer a:link {
-    color: inherit;
+body.light footer a:link{
+    color: #222;
 }
 
-body.light footer a:hover,
+body.dark footer a:link{
+    color: #fff;
+}
+
+body.light footer a:hover {
+    color: #61a4f1;
+}
+
 body.dark footer a:hover {
     color: #61a4f1;
 }
@@ -125,10 +128,11 @@ body.dark footer a:hover {
     }
 
     nav ul {
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
     nav li {
-        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
