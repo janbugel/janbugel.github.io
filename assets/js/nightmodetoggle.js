@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const body = document.body;
         body.classList.toggle("dark");
 
-        // Update the button text based on the current theme
+        // Update the button text with sun or moon emoji based on the current theme
         const button = document.getElementById("theme-toggle-button");
-        button.textContent = body.classList.contains("dark") ? "light" : "dark";
+        button.innerHTML = body.classList.contains("dark") ? "🌞" : "🌙";
 
         // Save the current theme preference to localStorage
         const isDarkMode = body.classList.contains("dark");
