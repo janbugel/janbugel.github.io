@@ -1,6 +1,7 @@
 # janbugel.github.io
 
-1. make index.html
-2. put resume there
-3. create projects site
-4. put projects there
+to do list
+
+1. finish basic site
+2. make it more like a resume
+3. add simple games 
