@@ -1,3 +1,5 @@
+// footer 
+
 document.addEventListener("DOMContentLoaded", function () {
     // Define the footer HTML content as a string
     const footerContent = `

@@ -17,12 +17,12 @@ body {
     margin: 0 auto;
 }
 
-body.dark {
+body.🌙 {
     background-color: #222;
     color: #fff;
 }
 
-body.light {
+body.🌞 {
     background-color: #fff;
     color: #222;
 }
@@ -35,7 +35,7 @@ header {
     text-align: center;
 }
 
-header.dark {
+header.🌙 {
     background-color: #222;
     color: #fff;
 }
@@ -59,19 +59,28 @@ nav a {
     font-size: 20px;
     color: inherit;
 }
-nav a:hover {
-    color: #61a4f1;
-}
+
 
 /* Change nav link color based on body color */
 
-body.light nav a:link{
+
+body.🌞 nav a:link {
     color: #222;
 }
 
-body.dark nav a:link{
+body.🌙 nav a:link {
     color: #fff;
 }
+
+/* Change nav link color on hover */
+
+nav a:hover{
+    color: #61a4f1;
+}
+body.🌙 nav a:hover{
+    color: #61a4f1;
+}
+
 
 
 /* button styles */
@@ -85,10 +94,6 @@ button {
     cursor: pointer;
     padding: 0;
     /*transition: background-color 0.3s, color 0.3s; /* Added transition for smooth color change */
-}
-
-button:hover {
-    color: #61a4f1;
 }
 
 /* section styles*/
@@ -110,16 +115,20 @@ footer {
     margin-bottom: 20px;
 }
 
+body.🌞 footer a:link{
+    color: #222;
+}
+
+body.🌙 footer a:link{
+    color: #fff;
+}
+
 footer a:hover {
     color: #61a4f1;
 }
 
-body.light footer a:link{
-    color: #222;
-}
-
-body.dark footer a:link{
-    color: #fff;
+body.🌙 footer a:hover {
+    color: #61a4f1;
 }
 
 /* Responsive Styles */
