@@ -1,7 +1,6 @@
-/* styles.css */
+/* layout.css */
 
 /* body styles*/
-
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -16,32 +15,18 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
-
-body.🌙 {
-    background-color: #121212;
-    color: #fff;
-}
-
-body.🌞 {
-    background-color: #fff;
-    color: #121212;
+body.theme-transition {
+    transition: none;
 }
 
 /* Header styles*/
-
 header {
     width: 100%;
     padding: 20px 0;
     text-align: center;
 }
 
-header.🌙 {
-    background-color: #121212;
-    color: #fff;
-}
-
 /* nav styles*/ 
-
 nav ul {
     list-style: none;
     display: flex;
@@ -57,47 +42,18 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    color: inherit;
 }
-
-
-/* Change nav link color based on body color */
-
-
-body.🌞 nav a:link {
-    color: #121212;
-}
-
-body.🌙 nav a:link {
-    color: #fff;
-}
-
-/* Change nav link color on hover */
-
-nav a:hover{
-    color: #61a4f1;
-}
-body.🌙 nav a:hover{
-    color: #61a4f1;
-}
-
-
 
 /* button styles */
-
 button {
-    background-color: transparent;
-    color: inherit;
     border: none;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
     padding: 0;
-    /*transition: background-color 0.3s, color 0.3s; /* Added transition for smooth color change */
 }
 
 /* section styles*/
-
 section {
     flex: 0;
     padding: 40px 20px;
@@ -106,7 +62,6 @@ section {
 }
 
 /* footer styles */
-
 footer {
     text-align: center;
     padding: 10px 0;
@@ -115,24 +70,7 @@ footer {
     margin-bottom: 20px;
 }
 
-body.🌞 footer a:link{
-    color: #121212;
-}
-
-body.🌙 footer a:link{
-    color: #fff;
-}
-
-footer a:hover {
-    color: #61a4f1;
-}
-
-body.🌙 footer a:hover {
-    color: #61a4f1;
-}
-
 /* Responsive Styles */
-
 @media only screen and (max-width: 768px) {
     nav {
         margin-top: 10px;

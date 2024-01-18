@@ -1,0 +1,63 @@
+<!-- themes.html -->
+
+<!-- global -->
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/footer.js"></script>
+<script src="/assets/js/load-theme-switcher.js"></script>
+
+<!-- specific to this file -->
+<script src="/assets/js/theme-display.js"></script>
+<script src="themes/theme-list.json" defer></script>
+<script src="/assets/js/theme-switcher.js"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+
+  <!-- Include your default CSS file here -->
+  <link id="themeStylesheet" rel="stylesheet" href="/assets/css/layout.css">
+
+  <style>
+
+    .theme-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .theme-item {
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .theme-item:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav id="navbar-placeholder"></nav>
+  </header>
+
+  <h1>Theme Switcher</h1>
+
+  <div class="theme-list" id="themeList"></div>
+
+  <footer>
+    <nav id="footer-placeholder"></nav>
+  </footer>
+
+</body>
+
+</html>
