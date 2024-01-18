@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContent = `
         <ul class="navbar">
             <li><a href="/">home</a></li>
-            <li><a href="about">about</a></li>
             <li><a href="work">work</a></li>
             <li><a href="education">education</a></li>
             <li><a href="contact">contact</a></li>

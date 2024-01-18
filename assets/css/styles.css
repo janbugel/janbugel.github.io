@@ -18,13 +18,13 @@ body {
 }
 
 body.🌙 {
-    background-color: #222;
+    background-color: #121212;
     color: #fff;
 }
 
 body.🌞 {
     background-color: #fff;
-    color: #222;
+    color: #121212;
 }
 
 /* Header styles*/
@@ -36,7 +36,7 @@ header {
 }
 
 header.🌙 {
-    background-color: #222;
+    background-color: #121212;
     color: #fff;
 }
 
@@ -65,7 +65,7 @@ nav a {
 
 
 body.🌞 nav a:link {
-    color: #222;
+    color: #121212;
 }
 
 body.🌙 nav a:link {
@@ -116,7 +116,7 @@ footer {
 }
 
 body.🌞 footer a:link{
-    color: #222;
+    color: #121212;
 }
 
 body.🌙 footer a:link{
