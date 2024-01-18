@@ -2,8 +2,21 @@
 
 // Function to switch the theme globally
 function switchTheme(themeName, theme) {
+  // Add a class to the body to apply default styles immediately
+  document.body.classList.add('theme-transition');
+  
   document.body.style.background = theme.background;
   document.body.style.color = theme.color;
+
+  // Save the selected theme to local storage
+  localStorage.setItem('selectedTheme', themeName);
+
+  console.log(`Switched to ${themeName} theme`);
+
+  // Use a setTimeout to delay removing the transition class
+  setTimeout(() => {
+    document.body.classList.remove('theme-transition');
+  }, 1000); // Adjust the delay based on your transition duration
 
   // Remove the existing theme stylesheet, if any
   const existingThemeStylesheet = document.getElementById('theme-stylesheet');
@@ -19,11 +32,6 @@ function switchTheme(themeName, theme) {
 
   // Append the new theme stylesheet to the document head
   document.head.appendChild(newThemeStylesheet);
-
-  // Save the selected theme to local storage
-  localStorage.setItem('selectedTheme', themeName);
-
-  console.log(`Switched to ${themeName} theme`);
 }
 
 // Fetch the theme-list.json
