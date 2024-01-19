@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="work.html">work</a></li>
             <li><a href="education.html">education</a></li>
             <li><a href="contact.html">contact</a></li>
-            <label for="colorPicker">theme</label>
+            <label for="colorPicker">themes</label>
             <input type="color" id="colorPicker" value="#3498db" style="display:none;">
         </ul>
     `;
