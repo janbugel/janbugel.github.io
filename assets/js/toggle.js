@@ -2,7 +2,7 @@
 
 class ColorModeToggle {
     constructor() {
-        this.colorModes = ['Dark', 'Orange', 'Blue', 'Green', 'Purple', 'Pink', 'Red', 'Yellow', 'Teal', 'Brown'];
+        this.colorModes = ['Dark', 'Light', 'Orange', 'Blue', 'Green', 'Purple', 'Pink', 'Red', 'Yellow', 'Teal', 'Brown'];
         this.initializeDropdown();
         this.setInitialColorMode();
     }
@@ -27,9 +27,10 @@ class ColorModeToggle {
         this.colorModes.forEach(mode => {
             const option = document.createElement('a');
             option.href = '#';
-            option.textContent = `${mode} Mode`;
+            option.textContent = mode;
             option.addEventListener('click', () => {
                 this.toggleColorMode(mode);
+                dropdownContainer.classList.remove('show'); 
             });
             dropdownContainer.appendChild(option);
         });
