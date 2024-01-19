@@ -5,7 +5,7 @@
 - [x] finish basic site 
 - [ ] make it more like a resume - fill with text
 - [x] add dark mode toggle
-- [ ] add themes from typings
+- [x] add themes
 - [ ] add language toggle
 - [ ] add simple games 
 - [ ] add backend project
