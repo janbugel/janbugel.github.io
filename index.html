@@ -14,7 +14,19 @@
   <link id="layoutStylesheet" rel="stylesheet" href="/assets/css/layout.css">
 </head>
     <header>
-        <nav id="navbar-placeholder"></nav>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="/">home</a></li>
+                <li><a href="work.html">work</a></li>
+                <li><a href="education.html">education</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="javascript:void(0);" id="colorPickerLabel" class="color-picker-label" onclick="openColorPicker()">
+                 <label for="colorPicker">themes</label>
+            </a></li>
+            <input type="color" id="colorPicker" style="display: none;">
+        </nav>
+        
     </header>
 
 
