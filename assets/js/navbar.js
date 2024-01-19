@@ -3,10 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContent = `
         <ul class="navbar">
             <li><a href="/">home</a></li>
-            <li><a href="work">work</a></li>
-            <li><a href="education">education</a></li>
-            <li><a href="contact">contact</a></li>
-            <li><a href="themes">themes</a></li>
+            <li><a href="work.html">work</a></li>
+            <li><a href="education.html">education</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <ul class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Color Mode</button>
+                <div class="dropdown-content" id="colorModeDropdown"></div>
+            </div>
+        </ul>
         </ul>
     `;
 
