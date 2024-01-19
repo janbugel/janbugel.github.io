@@ -17,7 +17,7 @@ body {
 }
 
 .dark-mode {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 
 }
@@ -26,42 +26,42 @@ body {
     color: #333;
 }
 .orange-mode {
-    background-color: #ff7f00;
-    color: #fff;
+    background-color: rgba(255, 166, 0, 0.73);
+    color: black;
 }
 
 .blue-mode {
-    background-color: #3498db;
+    background-color: #0099ffb5;
     color: #fff;
 }
 
 .green-mode {
-    background-color: #2ecc71;
-    color: #fff;
+    background-color: #00ff6abc;
+    color: red;
 }
 
 .purple-mode {
-    background-color: #9b59b6;
+    background-color: #9d67b3;
     color: #fff;
 }
 
 .pink-mode {
-    background-color: #e91e63;
+    background-color: #d87496;
     color: #fff;
 }
 
 .red-mode {
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: #ff1900b6;
+    color: black;
 }
 
 .yellow-mode {
-    background-color: #f1c40f;
+    background-color: #ffcc00bd;
     color: #333;
 }
 
 .teal-mode {
-    background-color: #008080;
+    background-color: #2b8282d3;
     color: #fff;
 }
 
@@ -94,11 +94,16 @@ nav li {
 }
 
 nav a {
+    color: black;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
 }
 
+nav a:hover {
+    color: blue;
+    transition: 0.25s;
+}
 /* button styles */
 button {
     border: none;
@@ -109,15 +114,47 @@ button {
     background-color: transparent;
 }
 
+.theme-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.theme-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff; /* Set text color to white for better visibility */
+}
+
+/* Define colors for each theme */
+.theme-button[data-theme="Dark"] { background-color: #222; }
+.theme-button[data-theme="Orange"] { background-color: #FFA500; }
+.theme-button[data-theme="Blue"] { background-color: #3498db; }
+.theme-button[data-theme="Green"] { background-color: #2ecc71; }
+.theme-button[data-theme="Purple"] { background-color: #9b59b6; }
+.theme-button[data-theme="Pink"] { background-color: #e91e63; }
+.theme-button[data-theme="Red"] { background-color: #e74c3c; }
+.theme-button[data-theme="Yellow"] { background-color: #f1c40f; }
+.theme-button[data-theme="Teal"] { background-color: #008080; }
+.theme-button[data-theme="Brown"] { background-color: #795548; }
+
 /* dropdown styles */
 .dropbtn {
     background-color: transparent;
-    color: white;
     padding: 16px;
+    color : black;
     font-size: 20px;
     border: none;
     cursor: pointer;
   }
+
+.dropbtn:hover {
+    color:blue;
+    transition: 0.25s;
+}
 
 .dropdown-content {
     display: none;
