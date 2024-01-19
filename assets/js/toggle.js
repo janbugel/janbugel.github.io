@@ -1,4 +1,3 @@
-// ColorModeToggle: A class for managing color mode toggling and dropdown initialization.
 
 class ColorModeToggle {
     constructor() {
