@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContent = `
         <ul class="navbar">
             <li><a href="/">home</a></li>
-            <li><a href="work.html">work</a></li>
-            <li><a href="education.html">education</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <label for="colorPicker">themes</label>
-            <input type="color" id="colorPicker" value="#3498db" style="display:none;">
+            <li><a href="work">work</a></li>
+            <li><a href="education">education</a></li>
+            <li><a href="contact">contact</a></li>
+            <li><a href="colorPicker" id="colorPickerLabel" class="color-picker-label">
+                 <label for="colorPicker">themes</label>
+            </a></li>
+            <input type="color" id="colorPicker" style="display: none;">
         </ul>
     `;
 
@@ -15,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // color picker
 
-    // ColorPickerApp.js
     class ColorPickerApp {
         constructor(colorPickerId) {
             this.colorPicker = document.getElementById(colorPickerId);
@@ -44,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const brightness = this.calculateBrightness(color);
             const textColor = (brightness < 128) ? "#ffffff" : "#000000";
             document.body.style.color = textColor;
-
-            // Update text color for navigation links
             const navLinks = document.querySelectorAll('nav a');
             navLinks.forEach(link => {
                 link.style.color = textColor;

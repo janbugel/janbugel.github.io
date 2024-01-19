@@ -1,5 +1,3 @@
-/* layout.css */
-webkit-appearance none
 /* body styles*/
 body, h1, h2, h3, p {
     margin: 0;
@@ -16,68 +14,9 @@ body {
     margin: 0 auto;
 }
 
-.dark-mode {
-    background-color: #000000;
-    color: #fff;
-
-}
-.light-mode {
-    background-color: #fff;
-    color: #333;
-}
-.orange-mode {
-    background-color: rgba(255, 166, 0, 0.73);
-    color: black;
-}
-
-.blue-mode {
-    background-color: #0099ffb5;
-    color: #fff;
-}
-
-.green-mode {
-    background-color: #00ff6abc;
-    color: red;
-}
-
-.purple-mode {
-    background-color: #9d67b3;
-    color: #fff;
-}
-
-.pink-mode {
-    background-color: #d87496;
-    color: #fff;
-}
-
-.red-mode {
-    background-color: #ff1900b6;
-    color: black;
-}
-
-.yellow-mode {
-    background-color: #ffcc00bd;
-    color: #333;
-}
-
-.teal-mode {
-    background-color: #2b8282d3;
-    color: #fff;
-}
-
-.brown-mode {
-    background-color: #8b4513;
-    color: #fff;
-}
-
-body.theme-transition {
-    transition: none;
-}
-
 /* Header styles*/
 header {
     width: 100%;
-    padding: 20px 0;
     text-align: center;
 }
 
@@ -90,95 +29,27 @@ nav ul {
 }
 
 nav li {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
-nav a {
-    color: black;
+nav a,
+.color-picker-label{
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-}
-
-nav a:hover {
-    color: blue;
-    transition: 0.25s;
-}
-/* button styles */
-button {
-    border: none;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 0;
+    padding: 5px;
     background-color: transparent;
-}
-
-.theme-button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.theme-button {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
     border-radius: 5px;
-    color: #fff; /* Set text color to white for better visibility */
-}
-
-/* Define colors for each theme */
-.theme-button[data-theme="Dark"] { background-color: #222; }
-.theme-button[data-theme="Orange"] { background-color: #FFA500; }
-.theme-button[data-theme="Blue"] { background-color: #3498db; }
-.theme-button[data-theme="Green"] { background-color: #2ecc71; }
-.theme-button[data-theme="Purple"] { background-color: #9b59b6; }
-.theme-button[data-theme="Pink"] { background-color: #e91e63; }
-.theme-button[data-theme="Red"] { background-color: #e74c3c; }
-.theme-button[data-theme="Yellow"] { background-color: #f1c40f; }
-.theme-button[data-theme="Teal"] { background-color: #008080; }
-.theme-button[data-theme="Brown"] { background-color: #795548; }
-
-/* dropdown styles */
-.dropbtn {
-    background-color: transparent;
-    padding: 16px;
-    color : black;
-    font-size: 20px;
-    border: none;
     cursor: pointer;
-  }
-
-.dropbtn:hover {
-    color:blue;
-    transition: 0.25s;
+    transition: background-color 0.3s ease; 
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+nav a:hover,
+.color-picker-label:hover {
+    background-color: rgba(126, 126, 126, 0.436);
+    transition: 0.3s;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: flex;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-}
 /* section styles*/
 section {
     flex: 0;
@@ -190,7 +61,6 @@ section {
 /* footer styles */
 footer {
     text-align: center;
-    padding: 10px 0;
     width: 100%;
     margin-top: auto;
     margin-bottom: 20px;
