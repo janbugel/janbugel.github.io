@@ -1,7 +1,3 @@
-/* listens to event on the color picker label
-(reason is there is bug on webkit browsers that it 
-doesn't trigger the input event on the color picker */
-
 class ColorModeToggle {
     constructor() {
         this.colorPicker = document.getElementById('colorPicker');
@@ -16,38 +12,54 @@ class ColorModeToggle {
     }
 
     toggleCustomColorMode() {
-        const body = document.body;
         const customColor = this.colorPicker.value;
-    
-        body.style.backgroundColor = customColor;
-    
-        // Determine if the background color is dark
-        const isDark = this.isColorDark(customColor);
-    
-        // Set text color based on background darkness
-        body.style.color = isDark ? 'white' : 'black';
-    
-        // Change color of links
-        const links = document.getElementsByTagName('a');
-        for (const link of links) {
-            link.style.color = isDark ? 'white' : 'black';
-        }
-    
+        this.setBodyBackgroundColor(customColor);
+        this.setHeaderBackgroundColor(customColor);
+        this.setBodyTextColorBasedOnBackground(customColor);
+        this.setLinkColorsBasedOnBackground();
+
         localStorage.setItem('customColorMode', customColor);
     }
 
+    setBodyBackgroundColor(customColor) {
+        const body = document.body;
+        body.style.backgroundColor = customColor;
+    }
+
+    setHeaderBackgroundColor(customColor) {
+        const header = document.getElementById('header');
+        if (header) {
+            header.style.backgroundColor = customColor;
+        }
+    }
+
+    setBodyTextColorBasedOnBackground(customColor) {
+        const body = document.body;
+        const isDark = this.isColorDark(customColor);
+        body.style.color = isDark ? 'white' : 'black';
+    }
+
+    setLinkColorsBasedOnBackground() {
+        const links = document.getElementsByTagName('a');
+        const isDark = this.isColorDark(this.colorPicker.value);
+
+        for (const link of links) {
+            link.style.color = isDark ? 'white' : 'black';
+        }
+    }
+
     isColorDark(hexColor) {
-        // Function to determine if a color is dark based on its hex value
+        const brightness = this.calculateBrightness(hexColor);
+        return brightness < 128;
+    }
+
+    calculateBrightness(hexColor) {
         const hex = hexColor.replace(/^#/, '');
         const r = parseInt(hex.substring(0, 2), 16);
         const g = parseInt(hex.substring(2, 4), 16);
         const b = parseInt(hex.substring(4, 6), 16);
 
-        // Formula to calculate brightness (perceived luminance)
-        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-        // You can adjust the threshold (e.g., 128) based on your preference
-        return brightness < 128;
+        return (r * 299 + g * 587 + b * 114) / 1000;
     }
 
     setInitialColorMode() {

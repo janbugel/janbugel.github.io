@@ -8,13 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="education">education</a></li>
             <li><a href="contact">contact</a></li>
 
+            <!--
+            https://act-rules.github.io/pages/examples/visible/
+            -->
             
+            <!--
             <li>
                 <a href="javascript:void(0);" class="color-picker-label" onclick="onClick()">
                 <label id="colorPickerLabel" for="colorPicker">themes</label>
-                <input type="color" id="colorPicker" style="position: absolute; left: -9999px;"></a>
+                <input type="color" id="colorPicker" style="transform: scale(0%)"></a>
             </li>
+            -->
             
+            <li><a href="javascript:void(0);" id="colorPickerLabel" class="color-picker-label" onclick="openColorPicker()">
+            <label id="colorPickerLabel" for="colorPicker">themes</label>
+            </a></li>
+            <input type="color" id="colorPicker" style="transform: scale(0%)""> 
             
             <!--
             <li>
@@ -27,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <input type="color" id="colorPicker" >
             -->
+            
             <!--
             <label 
                 id="colorPickerLabel" for="colorPicker" tabindex="0">
