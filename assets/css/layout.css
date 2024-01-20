@@ -42,8 +42,6 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    background-color: transparent;
-    transition: background-color 0.3s ease; 
 }
 
 a {
