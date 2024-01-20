@@ -12,14 +12,18 @@ body {
     min-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
+    border-left: 1px solid #6868686c;
+    border-right: 1px solid #6868686c;
 }
 
 /* Header styles*/
 header {
+    position: fixed;
     width: 100%;
-    padding: 20px 0;
     text-align: center;
-    background-color: transparent;
+    background-color: inherit;
+    border-bottom: 1px solid #6868686c;
+    max-width: 800px;
 }
 
 /* nav styles*/ 
@@ -64,6 +68,7 @@ section {
     padding: 40px 20px;
     box-sizing: border-box;
     text-align: left;
+    padding-top: 130px;
 }
 
 /* footer styles */
