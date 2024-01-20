@@ -45,6 +45,10 @@ nav a,
     transition: background-color 0.3s ease; 
 }
 
+a {
+    color: #000;
+}
+
 nav a:hover,
 .color-picker-label:hover {
     background-color: rgba(126, 126, 126, 0.436);
