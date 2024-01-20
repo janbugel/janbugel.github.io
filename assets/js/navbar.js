@@ -7,12 +7,42 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="work">work</a></li>
             <li><a href="education">education</a></li>
             <li><a href="contact">contact</a></li>
+
+            
             <li>
-            <a href="javascript:void(0);" id="colorPickerLabel" class="color-picker-label" onclick="openColorPicker()">
+                <a href="javascript:void(0);" class="color-picker-label" onclick="onClick()">
                 <label id="colorPickerLabel" for="colorPicker">themes</label>
+                <input type="color" id="colorPicker" style="position: absolute; left: -9999px;"></a>
+            </li>
+            
+            
+            <!--
+            <li>
+            <a href="javascript:void(0);" class="color-picker-label" onclick="onClick()"></a>
+            </li>
+
+            <label id="colorPickerLabel" for="colorPicker">themes</label>
+
+            <br>
+
+            <input type="color" id="colorPicker" >
+            -->
+            <!--
+            <label 
+                id="colorPickerLabel" for="colorPicker" tabindex="0">
+                themes
+                <input type="color" id="colorPicker" style="position: absolute; left: -9999px;">
+            </label>
+            -->
+            
+            <!--
+            <li>
+                <a href="javascript:void(0);" class="color-picker-label" onclick="onClick()">
+                <label id="colorPickerLabel" for="colorPicker">themes</label>
+                <input type="color" id="colorPicker" style="position: absolute; left: -9999px;">
             </a>
             </li>
-            <input type="color" id="colorPicker" style="display: none;">
+            -->
         </ul>
     `;
 
