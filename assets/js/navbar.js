@@ -1,7 +1,7 @@
 // navigation menu
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navbarContent = `
+  const navbarContent = `
         <ul class="navbar">
             <li><a href="/">home</a></li>
             <li><a href="work">work</a></li>
@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
     `;
 
-    document.getElementById("navbar-placeholder").innerHTML = navbarContent;
-    document.getElementById("theme-toggle-button").click();
+  document.getElementById("navbar-placeholder").innerHTML = navbarContent;
+  document.getElementById("theme-toggle-button").click();
 });
