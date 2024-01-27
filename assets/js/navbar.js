@@ -7,16 +7,15 @@ function html(strings, ...values) {
   return result;
 }
 
-// navigation menu
 document.addEventListener("DOMContentLoaded", function () {
   const navbarContent = html`
     <ul class="navbar">
       <li><a href="/">home</a></li>
       <!--
-      <li><a href="work">work</a></li>
+      <li><a href="work.html">work</a></li>
       -->
-      <li><a href="education">education</a></li>
-      <li><a href="contact">contact</a></li>
+      <li><a href="education.html">education</a></li>
+      <li><a href="contact.html">contact</a></li>
       <li>
         <a
           href="javascript:void(0);"
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <label id="colorPickerLabel" for="colorPicker">themes</label>
         </a>
       </li>
-      <input type="color" id="colorPicker" style="transform: scale(0%)">
+      <input type="color" id="colorPicker" style="transform: scale(0%)" />
       <!--
       https://act-rules.github.io/pages/examples/visible/
       -->
