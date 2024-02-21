@@ -28,6 +28,12 @@ header {
   text-align: center;
   border-bottom: 1px solid #6868686c;
   max-width: 800px;
+  transition: top 0.3s;
+  top: 0;
+}
+
+.header-hidden {
+  top: -100px; /* Adjust this value based on your header's height */
 }
 
 /* nav styles*/
@@ -51,14 +57,6 @@ nav a {
 a {
   color: #000;
 }
-
-/*
-nav a:hover,
-.color-picker-label:hover {
-    background-color: rgba(126, 126, 126, 0.436);
-    transition: 0.3s;
-}
-*/
 
 label {
   cursor: pointer;
