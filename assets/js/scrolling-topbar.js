@@ -1,6 +1,7 @@
 let lastScrollTop = 0;
+let ticking = false;
 
-window.addEventListener("scroll", function() {
+function onScroll() {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
@@ -12,4 +13,7 @@ window.addEventListener("scroll", function() {
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-}, false);
+}
+
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("touchmove", onScroll, { passive: true });
